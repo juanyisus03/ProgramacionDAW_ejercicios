@@ -46,10 +46,7 @@ public class Ejercicio04_CambioADelvolver {
 			cambio = cambio%5;
 		}
 		
-		if(cambio/1 != 0) {
-			System.out.println(cambio/1 + " monedas de 1 = " + cambio/1*1);
-			cambio = cambio%1;
-		}
+			System.out.println(cambio +" monedas de 1 = "+ cambio);
 		
 		
 		
