@@ -1,5 +1,10 @@
 package capitulo3.bloque04;
 
+/*
+ * Calcula el factorial de un número dado por el usuario. 
+ * Debes usar sólo el bucle while. 
+ */
+
 import java.util.Scanner;
 
 public class Ejercicio05_Factorial {
