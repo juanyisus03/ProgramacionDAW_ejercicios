@@ -14,10 +14,9 @@ public class Ejercicio01_PrimosSinFor {
 		int num;
 		int i = 1;
 		boolean esPrimo = true;
+		
 		System.out.println("Introduzca un número: ");
 		num = sc.nextInt();
-		
-		
 		
 		while (i < num){
 			
@@ -28,17 +27,8 @@ public class Ejercicio01_PrimosSinFor {
 			i++;
 		}
 		
-		if(esPrimo == true){
-			System.out.println(num + " es primo");
-		}
-		else {
-			System.out.println(num + " es compuesto");
-		}
-		
-		
-		
-		
-		
+		if(esPrimo == true) System.out.println(num + " es primo");
+		else System.out.println(num + " es compuesto");
 		
 	}
 }

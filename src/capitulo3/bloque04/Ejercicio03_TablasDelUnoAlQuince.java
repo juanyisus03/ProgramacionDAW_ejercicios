@@ -9,7 +9,6 @@ public class Ejercicio03_TablasDelUnoAlQuince {
 
 	public static void main(String[] args) {
 		int i = 1;
-
 		
 		do {
 			int num = 0;
@@ -21,8 +20,10 @@ public class Ejercicio03_TablasDelUnoAlQuince {
 				num++;
 				
 			} while(num<11);
+			
 			System.out.println("");
 			i++;
+			
 		} while(i < 16);
 		
 		

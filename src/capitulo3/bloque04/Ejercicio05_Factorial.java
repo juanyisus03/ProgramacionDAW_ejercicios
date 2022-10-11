@@ -20,8 +20,7 @@ public class Ejercicio05_Factorial {
 			factorial *= num;
 			num--;
 		}
+		
 		System.out.println("Su factorial es " + factorial);
-		
-		
 	}
 }

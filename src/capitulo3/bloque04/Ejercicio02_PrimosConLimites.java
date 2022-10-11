@@ -12,8 +12,6 @@ public class Ejercicio02_PrimosConLimites {
 		Scanner sc = new Scanner(System.in);
 		int limiteInferior,limiteSuperior;
 
-		
-		
 		System.out.println("Introduzca limite inferior: ");
 		limiteInferior = sc.nextInt();
 		System.out.println("Introduzca limite superior: ");
