@@ -25,6 +25,6 @@ public class Ejercicio01_SumaMediaYSalirseConCero {
 		}
 		
 		System.out.println("La suma de sus números es: " + sum);
-		System.out.println("La media de sus números es: " + sum/(i-1));
+		System.out.println("La media de sus números es: " + sum/(float) (i-1));
 	}
 }
