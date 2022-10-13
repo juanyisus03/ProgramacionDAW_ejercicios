@@ -11,6 +11,8 @@ public class Ejercicio02_PrimosConLimites {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int limiteInferior,limiteSuperior;
+		int i = 2;
+		boolean esPrimo = true;
 
 		System.out.println("Introduzca limite inferior: ");
 		limiteInferior = sc.nextInt();
@@ -18,16 +20,12 @@ public class Ejercicio02_PrimosConLimites {
 		limiteSuperior = sc.nextInt();
 		
 		while(limiteInferior < limiteSuperior + 1 ){
-			
-			int i = 1;
-			boolean esPrimo = true;
+			i = 2;
+			esPrimo = true;
 			
 			while (i < limiteInferior){
 				
-				if(limiteInferior % i == 0 && i != 1) {
-					esPrimo = false;
-				}
-				
+				if(limiteInferior % i == 0)esPrimo = false;
 				i++;
 			}
 			

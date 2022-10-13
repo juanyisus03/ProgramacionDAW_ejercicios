@@ -9,9 +9,10 @@ public class Ejercicio03_TablasDelUnoAlQuince {
 
 	public static void main(String[] args) {
 		int i = 1;
+		int num = 0;
 		
 		do {
-			int num = 0;
+			num = 0;
 			System.out.println(" Tabla del número " + i);
 			System.out.println("--------------------");
 			do {
