@@ -11,7 +11,7 @@ package capitulo04.bloque04;
 
 import java.util.Scanner;
 
-public class Ejercicio04_DNI {
+public class Ejercicio03_DNI {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
