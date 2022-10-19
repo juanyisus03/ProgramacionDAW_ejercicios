@@ -15,6 +15,9 @@ public class Ejercicio02_MezclarValoresDeDosArrays {
 		int array2[] =  new int [150];
 		int array3[] =  new int [150];
 		
+		
+		System.out.println("Primer Array \n");
+		
 		for(int i = 0; i < array1.length; i++) {
 			
 			array1[i] = (int) Math.round(Math.random()*(100+100)-100);
@@ -22,6 +25,7 @@ public class Ejercicio02_MezclarValoresDeDosArrays {
 		}
 		
 		System.out.println("");
+		System.out.println("\nSegundo Array \n");
 		
 		for(int i = 0; i < array2.length; i++) {
 			
@@ -30,6 +34,7 @@ public class Ejercicio02_MezclarValoresDeDosArrays {
 		}
 		
 		System.out.println("");
+		System.out.println("\nTercer Array \n");
 		
 		for(int i = 0; i < array3.length; i++) {
 			

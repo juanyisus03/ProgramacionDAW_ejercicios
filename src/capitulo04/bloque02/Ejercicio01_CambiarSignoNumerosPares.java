@@ -21,7 +21,9 @@ public class Ejercicio01_CambiarSignoNumerosPares {
 		
 		for(int i = 0; i < array.length; i++) {
 			
-			if((i & 1) != 1) array[i] = -array[i]; 
+			array[i] = -array[i];
+			
+			if((array[i] & 1) != 1) array[i] = -array[i]; 
 			
 			System.out.print(array[i] + ", ");
 			
