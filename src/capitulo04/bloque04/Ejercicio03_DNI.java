@@ -23,17 +23,13 @@ public class Ejercicio03_DNI {
 		
 		//Le mando al método "hallarLetra" el resto y el dni
 		hallarLetra(dni%23, dni);
-		
-		
 	}
 	
+	//
 	public static void hallarLetra(int resto, int dni) {
 		String letras[] = new String [] { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
 		
 		//Imprimo el DNI con la letra
 		System.out.println("Su DNI completo es: " + dni + letras[resto]);
-		
 	}
-	
-
 }

@@ -25,6 +25,7 @@ public class Ejercicio01_PrioridadAParesArray {
 					cambio = array[j];
 					array[j] = array[i];
 					array[i] = cambio;
+					break;
 					
 				}
 				

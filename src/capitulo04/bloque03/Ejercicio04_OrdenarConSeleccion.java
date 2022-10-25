@@ -11,7 +11,7 @@ public class Ejercicio04_OrdenarConSeleccion {
 
 	public static void main(String[] args) {
 		int array[] =  new int [150];
-		int cambio;
+		int menor, j, posicionMenor;
 		
 		for(int i = 0; i < array.length; i ++){
 			array[i] = (int) Math.round(Math.random()*1000);
@@ -23,16 +23,18 @@ public class Ejercicio04_OrdenarConSeleccion {
 		
 		for(int i = 0; i < array.length; i ++){
 			
-			for(int j = i; j < array.length; j++) {
+			menor = array[i];
+			posicionMenor = i;
+			for(j = i; j < array.length; j++) {
 				
-				if(array[j] < array[i]) {
-					cambio = array[j];
-					array[j] = array[i];
-					array[i] = cambio;
-					
+				if(array[j] < menor) {
+					menor = array[j];
+					posicionMenor = j;
 				}
 				
 			}
+			array[posicionMenor] = array[i];
+			array[i] = menor;
 			
 		}
 		
