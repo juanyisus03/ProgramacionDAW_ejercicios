@@ -52,30 +52,32 @@ public class Ejercicio02_DesplazarExceptoIntervalo {
 			}
 		}
 		
-		//Primero muevo a la derecha todo el array 
-		for(int i = (array.length - 1); i > 0 ; i--) {
-			
-			cambio = array[i];
-			array[i] = array[i-1];
-			array[i-1] = cambio;
-			
-		}
 		
-		//Muevo hacia la izquierda el intervalo de inicial y el final
-		for(int i = ini; i <= fin; i++) {	
-			cambio = array[i];
-			array[i] = array[i+1];
-			array[i+1] = cambio;
+		if(!(ini == 0 && fin == 9)) {
+			//Primero muevo a la derecha todo el array 
+			for(int i = (array.length - 1); i > 0 ; i--) {
+				
+				cambio = array[i];
+				array[i] = array[i-1];
+				array[i-1] = cambio;
+				
+			}
+			
+			//Muevo hacia la izquierda el intervalo de inicial y el final, asi el intervalo se queda donde estaba inicialmente
+			for(int i = ini; i <= fin; i++) {	
+				cambio = array[i];
+				array[i] = array[i+1];
+				array[i+1] = cambio;
+			}
+	
 		}
-	
-	
+			
 		//Imprimo el array para que se vean los cambios
 		for(int i = 0; i < array.length; i++) {
 			
 			System.out.print(array[i] + ", ");
 
 		}
-		
 		
 	}
 }
