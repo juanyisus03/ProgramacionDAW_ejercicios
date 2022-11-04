@@ -1,11 +1,17 @@
 package capitulo04.bloque04;
 
+/*
+ * Realiza un programa que rellene un array de 6 filas por 10 columnas con números enteros positivos comprendidos 
+ * entre 0 y 1000 (ambos incluidos). A continuación, el programa deberá dar la posición tanto del máximo como del 
+ * mínimo. Los números dentro de la matriz no pueden repetirse.
+ */
 
 public class Ejercicio04_PrimeraMatriz {
 	public static void main(String[] args) {
 		int matriz[][] = new int[6][10];
 		boolean cambio = true;
 		int mayor = 0, menor = 0;
+		
 		
 		//Inicializo la matriz
 		for(int i = 0; i < matriz.length; i ++) {
@@ -66,8 +72,8 @@ public class Ejercicio04_PrimeraMatriz {
 		for (int i = 0; i < matriz.length; i++) { 
 			for (int j = 0; j < matriz[i].length; j++) { 
 			
-				if(mayor == matriz[i][j]) System.out.println("El mayor número es " + mayor + " en la posicion (" + i + ", " + j + ")"); ;
-				if(menor == matriz[i][j]) System.out.println("El menor número es " + menor + " en la posicion (" + i + ", " + j + ")"); ;
+				if(mayor == matriz[i][j]) System.out.println("El mayor número es " + mayor + " en la posicion (" + j + ", " + i + ")"); ;
+				if(menor == matriz[i][j]) System.out.println("El menor número es " + menor + " en la posicion (" + j + ", " + i + ")"); ;
 				
 			}
 		

@@ -16,11 +16,12 @@ public class Ejercicio07_TresEnRaya {
 		int fin = 0;
 		
 		inicializarTablero(tablero);
-		imprimirTablero(tablero);
 		while(turnos != 9) {
 			
-			ponerPieza(tablero, turnos);
+			if(turnos%2 == 0) System.out.println("Turno del primer jugador 'x'");
+			else System.out.println("Turno del segundo jugador 'o'");
 			imprimirTablero(tablero);
+			ponerPieza(tablero, turnos);
 			fin = partidaAcabada(tablero);
 			if( fin != 0) {
 				break;
@@ -28,7 +29,7 @@ public class Ejercicio07_TresEnRaya {
 			turnos++;
 			
 		}
-		
+		imprimirTablero(tablero);
 		if(fin == 1) System.out.println("El jugador 1 ha ganado");
 		else System.out.println("El jugador 2 ha ganado");
 		

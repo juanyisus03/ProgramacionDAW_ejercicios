@@ -29,7 +29,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 		//Muestro las posiciones que va hacia arriba y la izquierda
 		for(int cont = 0; (num - cont) != 0 && (posletra - cont) != 0 ;cont++) {
 			
-			matriz[posletra - cont -1][num - cont -1] = "x";
+			matriz[num - cont -1][posletra - cont -1] = "x";
 			System.out.println("Se podria dezplazar a la casilla: " + letras[(posletra - cont -1)] + "," + (num - cont));
 			
 		}
@@ -37,7 +37,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 		//Muestro las posiciones que va hacia abajo y la derecha
 		for(int cont = 0; (num + cont) != 8 && (posletra + cont) != 8 ;cont++) {
 			if(((posletra + cont) < 8) && ((num + cont) < 8)) {
-				matriz[posletra + cont][num + cont] = "x";
+				matriz[num + cont][posletra + cont] = "x";
 				System.out.println("Se podria dezplazar a la casilla: " + letras[(posletra + cont)] + "," + (num + (cont + 1) ));
 			}
 		}
@@ -45,7 +45,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 		//Muestro las posiciones que va hacia abajo y la izquierda
 		for(int cont = 0; (num - cont) != 0 && (posletra + cont) != 8 ;cont++) {
 			if(((posletra + cont +1) < 8) && ((num - cont ) >= 0)) {
-				matriz[posletra + cont +1 ][num - cont -1] = "x";
+				matriz[num - cont -1][posletra + cont +1] = "x"; 
 				System.out.println("Se podria dezplazar a la casilla: " + letras[(posletra + cont + 1)] + "," + (num - cont ));
 			}
 		}
@@ -53,7 +53,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 		//Muestro las posiciones que va hacia arriba y la derecha
 		for(int cont = 0; (num + cont) != 8 && (posletra - cont) != 0 ;cont++) {
 			if(((posletra - cont -1) >= 0) && ((num + cont +1) < 8)) {
-				matriz[posletra - cont -1][num + cont + 1] = "x";
+				matriz[num + cont + 1][posletra - cont -1] = "x"; 
 				System.out.println("Se podria dezplazar a la casilla: " + letras[(posletra - cont -1)] + "," + (num + cont +2));
 			}
 		}
@@ -94,7 +94,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 		int i = 0;
 		pos = pos.substring(0, 1);
 		for(i = 0; i < letras.length; i ++) {
-			if(pos.equals(letras[i])) {
+			if(pos.toLowerCase().equals(letras[i])) {
 				break;
 			}
 		}
@@ -114,13 +114,13 @@ public class Ejercicio06_MovimientoDelAlfil {
 	}
 	public static void imprimirTablero(String[][] matriz, String[] letras) {
 		
-		System.out.println(" 1 2 3 4 5 6 7 8");
+		System.out.println(" a b c d e f g h ");
 		for(int i = 0; i < matriz.length; i ++) {
 			for(int j = 0; j < matriz[i].length; j ++) {
 				
 				System.out.print("|" + matriz[i][j]);
 			}
-			System.out.print("| "+ (letras[i]) +"\n"); 
+			System.out.print("| "+ (i + 1) +"\n"); 
 		}
 		System.out.println("\n \n \n \n");
 		
