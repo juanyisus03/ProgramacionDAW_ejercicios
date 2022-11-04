@@ -58,7 +58,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 			}
 		}
 		
-		imprimirTablero(matriz, letras);
+		imprimirTablero(matriz);
 		
 	
 	}
@@ -112,7 +112,7 @@ public class Ejercicio06_MovimientoDelAlfil {
 		}
 		
 	}
-	public static void imprimirTablero(String[][] matriz, String[] letras) {
+	public static void imprimirTablero(String[][] matriz) {
 		
 		System.out.println(" a b c d e f g h ");
 		for(int i = 0; i < matriz.length; i ++) {
