@@ -45,12 +45,14 @@ public class Ejercicio05_removeInteger {
 	public static int[] removeInteger(int[] array, int num) {
 		int sustituto[] = new int[array.length-1];
 		int i;
+		// Recorro el array hasta que encuentre el número a borrar
 		for( i = 0; i < array.length; i++) {
 			if(array[i] != num) {
 				sustituto[i] = array[i];
 			}
 			else break;
 		}
+		// Recorro desde donde me encontre el número hasta el final
 		for( ; i < array.length-1; i++) {
 			sustituto[i] = array[i+1];
 		}	
