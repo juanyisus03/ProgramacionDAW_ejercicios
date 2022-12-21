@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ejercicio04_MultiplosConLimiteDefinidoPorUsuario {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num, i, limite;
+		int num, limite;
 		
 		System.out.println("¿De qué número quieres ver los múltiplos?");
 		num = sc.nextInt();
@@ -20,8 +20,7 @@ public class Ejercicio04_MultiplosConLimiteDefinidoPorUsuario {
 		System.out.println("Múltiplos de " + num + " hasta " + limite);
 		System.out.println("");
 		
-		for(i = num; i < limite; i += num) {
-		
+		for(int i = num; i < limite; i += num) {
 			System.out.println(i);
 		}
 	}

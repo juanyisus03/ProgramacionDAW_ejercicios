@@ -67,9 +67,6 @@ public class UtilsArrays {
 	 * @param array
 	 */
 	public static void ordenaArray (int array[]) {
-
-	
-		
 		boolean hayIntercambios;
 		do {
 			hayIntercambios = false;
@@ -86,5 +83,11 @@ public class UtilsArrays {
 		} while (hayIntercambios);
 
 	}
+	
+	
+		
 
+			
+		
+	
 }

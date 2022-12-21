@@ -11,7 +11,7 @@ public class Ejercicio03_MediaConError {
 		
 		System.out.println("Generando números hasta que la media sea de 500 con 0,5 de error... \n");
 		
-		while(num/cont <= 495.5 || num/cont >= 500.5) {
+		while(num/cont <= 499.5 || num/cont >= 500.5) {
 			num += (int) Math.round(Math.random()*(1000-1)+1);
 			cont++;
 		}
