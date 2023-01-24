@@ -72,6 +72,7 @@ public class Ejercicio02_Editor_Texto {
 			portapapeles.clear();
 			for (int i = ini-1; i < fin; i++) {
 				portapapeles.add(fichero.get(i));
+				fichero.remove(i);
 			}
 		}
 	}
