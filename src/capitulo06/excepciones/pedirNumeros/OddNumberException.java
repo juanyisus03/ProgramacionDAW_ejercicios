@@ -1,4 +1,4 @@
-package capitulo06.pedirNumeros;
+package capitulo06.excepciones.pedirNumeros;
 
 public class OddNumberException extends Exception {
 

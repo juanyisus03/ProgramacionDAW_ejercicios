@@ -1,4 +1,4 @@
-package capitulo06.pedirNumeros;
+package capitulo06.excepciones.pedirNumeros;
 import java.util.Scanner;
 
 /* Implementa un programa que contenga una clase llamada "PeticionNumeros", con un método "pideNumeroPar()". Desde un método "main()" llama al método anterior. 

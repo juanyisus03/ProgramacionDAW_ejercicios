@@ -1,4 +1,4 @@
-package capitulo06.fraseConBombilla;
+package capitulo06.excepciones.fraseConBombilla;
 
 public class FraseEnBlancoException extends Exception {
 
