@@ -9,7 +9,7 @@ package capitulo07.bloque02;
 public class IgualarEcuaciones {
 
 	public static void main(String[] args) {
-		int x = 0;
+		float x = 0;
 		double y1, y2;
 		System.out.println("Unión y=√x, y=-ln(x) ");
 		do {
@@ -19,7 +19,7 @@ public class IgualarEcuaciones {
 			y2 = - Math.log(x);
 			
 			
-		}while(Math.abs(y1-y2) > 0.0001);
+		}while(Math.abs(y1-y2) >= 0.0001);
 		
 		System.out.println("x: " + x);
 		System.out.println("y1: " + y1);
