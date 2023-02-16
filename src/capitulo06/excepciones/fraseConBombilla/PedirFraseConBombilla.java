@@ -31,14 +31,13 @@ public class PedirFraseConBombilla {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	private static String pedirString() throws FraseEnBlancoException, FraseMuyCortaException, FraseOfensivaException, FraseSinBombillaException{
 		Scanner sc = new Scanner(System.in); 
 		System.out.print("Introduce una frase con bombilla: ");
 		String str = sc.next();
-		String palabras[] = str.split(" ");
+		String palabras[] = str.split("[ ]{1,}");
 		if(str.isBlank()) throw new FraseEnBlancoException("ERROR: La frase está en blanco");
 		else if(palabras.length < 3) throw new FraseMuyCortaException("ERROR: La frase debe de tener 3 palabras al menos");
 		else if(!str.contains("bombilla")) throw new FraseSinBombillaException("ERROR: La frase no contiene la palabra 'bombilla'");

@@ -56,7 +56,7 @@ public class UtilsArrays {
 	public static int[] creaArrayNumerosUsuario (int longitud) {
 		int array[] = new int[longitud];
 		for (int i = 0; i < array.length; i++) {
-			array[i] = Utils.obtenerEntero();
+			array[i] = Utils.obtenerEnteroPorScanner();
 		}
 		return array;
 	}

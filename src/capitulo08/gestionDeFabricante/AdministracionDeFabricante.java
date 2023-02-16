@@ -61,7 +61,11 @@ public class AdministracionDeFabricante {
 		
 	}
 	
-	
+	/**
+	 * 
+	 * @param conn
+	 * @throws SQLException
+	 */
 	private static void realizarDelete(Connection conn) throws SQLException {
 		int id = Integer.parseInt(JOptionPane.showInputDialog("Seleccione id del registro a borrar: "));
 		if(isValidId(conn, id)) {
@@ -74,7 +78,13 @@ public class AdministracionDeFabricante {
 		
 	}
 
-
+	/**
+	 * 
+	 * @param conn
+	 * @param id
+	 * @return
+	 * @throws SQLException
+	 */
 	private static boolean isValidId(Connection conn, int id) throws SQLException {
 		
 		Statement s = (Statement) conn.createStatement();
@@ -88,17 +98,21 @@ public class AdministracionDeFabricante {
 		return false;
 	}
 
-
+	/**
+	 * 
+	 * @param conn
+	 * @throws HeadlessException
+	 * @throws SQLException
+	 */
 	private static void realizarUpdate(Connection conn) throws HeadlessException, SQLException {
 		
 		int id = Integer.parseInt(JOptionPane.showInputDialog("Seleccione id del registro a modificar: "));
 		if(isValidId(conn, id)) {
 			Statement s = (Statement) conn.createStatement();
-			int idn =  Integer.parseInt(JOptionPane.showInputDialog("Introduzca id del fabricante: "));
 			String cif = JOptionPane.showInputDialog("Introduzca cif del fabricante: ");
 			String nombre = JOptionPane.showInputDialog("Introduzca nombre del fabricante: ");
 			
-			int rows = s.executeUpdate("update tutorialjavacoches.fabricante set id = "+ idn + ", cif = '"+ cif + "', nombre = '" + nombre + "' where id = " + id);
+			int rows = s.executeUpdate("update tutorialjavacoches.fabricante set cif = '"+ cif + "', nombre = '" + nombre + "' where id = " + id);
 			System.out.println("\n\nFilas Afectadas: " + rows + "\n\n");
 			s.close();
 		}
@@ -106,7 +120,11 @@ public class AdministracionDeFabricante {
 		
 	}
 
-
+	/**
+	 * 
+	 * @param conn
+	 * @throws SQLException
+	 */
 	private static void realizarInsert(Connection conn) throws SQLException {
 		
 		Statement s = (Statement) conn.createStatement();
@@ -123,7 +141,12 @@ public class AdministracionDeFabricante {
 
 	
 
-
+	/**
+	 * 
+	 * @param conn
+	 * @return
+	 * @throws SQLException
+	 */
 	private static int getNextValidID(Connection conn) throws SQLException {
 		
 		Statement s = (Statement) conn.createStatement();
@@ -134,7 +157,11 @@ public class AdministracionDeFabricante {
 		return 1;
 	}
 
-
+	/**
+	 * 
+	 * @param conn
+	 * @throws SQLException
+	 */
 	private static void realizarSelect(Connection conn) throws SQLException {
 		
 		Statement s = (Statement) conn.createStatement();
@@ -153,6 +180,10 @@ public class AdministracionDeFabricante {
 	}
 
 
+	/**
+	 * 
+	 * @return
+	 */
 	private static int menu() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -170,7 +201,12 @@ public class AdministracionDeFabricante {
 		
 	}
 
-
+	/**
+	 * 
+	 * @return
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public static Connection obtenerConeccion() throws ClassNotFoundException, SQLException {
 		
 		String driver = BDLeerFichero.getProperty("JDBC_DRIVER_CLASS");

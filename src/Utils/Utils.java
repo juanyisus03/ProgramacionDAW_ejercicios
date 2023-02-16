@@ -62,15 +62,6 @@ public class Utils {
 		return sc.nextInt();
 	}
 	
-	/**
-	 * Obtiene un número entero a través de un JOptionPane
-	 * @return Número entero introducido a través de un JOptionPane.
-	 */
-	public static int obtenerEnteroPorJOptionPane() {
-		String str = JOptionPane.showInputDialog("Introduce un número");
-		int numEntero = Integer.parseInt(str);
-		return numEntero;
-	}
 	
 	
 	public static int obtenerEnteroConDescripcion(String desc) {
@@ -79,11 +70,31 @@ public class Utils {
 		return num;
 	}
 	
-	/**
-	 * 
-	 * @return Número entero introducido por el usuario
-	 */
-	public static int obtenerEntero() {
-		return obtenerEnteroPorJOptionPane();
+	
+	public static int obtenerEnteroPorJoptionPane(String msg) {
+		
+		while (true) {
+			try {
+				return Integer.parseInt(JOptionPane.showInputDialog(msg));
+			} catch (Exception ex) {
+				JOptionPane.showMessageDialog(null, "Entrada no válida");
+				
+			}
+		}
+		
+	}
+	
+	public static String obtenerDatoObligatorioPorJoptionPane(String msg) {
+		String txt;
+		while (true) {
+			try {
+				txt = JOptionPane.showInputDialog(msg);
+				if(txt.isEmpty() || txt.isBlank()) throw new Exception(); 
+			} catch (Exception ex) {
+				JOptionPane.showMessageDialog(null, "Entrada no válida");
+				
+			}
+		}
+		
 	}
 }
