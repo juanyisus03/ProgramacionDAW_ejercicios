@@ -13,7 +13,7 @@ public class UtilsBBDD {
 	
 	public static int getNextValidID(Connection conn, String tabla) throws SQLException {
 		
-		PreparedStatement ps = conn.prepareStatement("select max(id) from tutorialjavacoches." + tabla);
+		PreparedStatement ps = conn.prepareStatement("select max(id) from " + tabla);
 		ResultSet rs = ps.executeQuery ();
 		
 		if(rs.next()) return rs.getInt(1)+1;
