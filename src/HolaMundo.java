@@ -1,4 +1,6 @@
 
+import java.io.Console;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,8 +15,16 @@ public class HolaMundo {
 	
 	public static void main(String[] args) {
 	 
-		JOptionPane.showInputDialog("hola");
+		try {
+			System.console().readLine();
+			System.out.println("Fin");
+			System.in.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
+		System.out.println("Fin");
 	}
 }
 
