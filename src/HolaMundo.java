@@ -14,17 +14,24 @@ import javax.swing.JOptionPane;
 public class HolaMundo {
 	
 	public static void main(String[] args) {
-	 
-		try {
-			System.console().readLine();
-			System.out.println("Fin");
-			System.in.read();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		int esp = 0;
+		String s = "v";
+		
+		while(s!="0") {
+			System.out.println("o");
+			s = JOptionPane.showInputDialog(null, "<a d>");
+			if(s == null) break;
+			if(s.equalsIgnoreCase("a") && esp != 0) esp--;
+			if(s.equalsIgnoreCase("d")) esp++;
+			
+			for (int i = 0; i < esp; i++) {
+				System.out.print(" ");
+				
+			}
+			
 		}
 		
-		System.out.println("Fin");
+		
 	}
 }
 
